@@ -1,0 +1,197 @@
+/*Essa URL é para formatar as letras*/
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background: white;
+    font-family: 'Roboto', sans-serif;
+}
+
+a{
+     /*O "text-decoration" igual a "none" vai retirar o sublinhado de baixo das palavras "Sobre" e "Receitas"*/
+     text-decoration: none;
+}
+
+.wrapper{
+    width: 940px;
+    /*A margin vai ser zerada em cima e embaixo, e nas laterais será automatico*/
+    margin: 0px auto;
+}
+
+header{
+    margin: 32px 0;
+    /*O "display" Adicionando grid no header*/
+    display: grid;
+    /*O "grid-template-columns" configura o grid com 2 colunas primeira com 210 pixels "Onde está a img",*/
+    /*e a segunda com 1 frection "Onde está os itens 'Sobre' e 'Receitas'*/
+    grid-template-columns: 210px 1fr;
+    /*O "align-items" está centralizando o conteúdo das duas celuldas*/
+    align-items: center;
+}
+
+.menu a{
+    font-size: 16px;
+    color: #111111;
+
+    margin-right: 30px;
+}
+
+.hero{
+    display: grid;
+    /*Aqui foi configurado duas colunas flexivas*/
+    grid-template-columns: 1fr 1fr;
+
+    background: #FBDFDB;
+    border-radius: 30px;
+}
+
+.hero .intro{
+    align-self: center;
+    width: 300px;
+    padding: 60px;
+}
+
+.hero .intro h1{
+    font-size: 32px;
+    line-height: 38px;
+    color: #111111;
+
+    margin-bottom: 10px;
+}
+
+.hero .intro p{
+    color: rgba(0, 0, 0, 0.7);
+    font-size: 18px;
+    line-height: 28px;
+
+}
+
+.hero img{
+    justify-self: center;
+}
+
+main{
+    margin: 50px 0;
+}
+
+main h2{
+    font-size: 24px;
+    color: #111111;
+    line-height: 28px;
+    margin-bottom: 20px;
+
+}
+
+main .content{
+    display: grid;
+    /*A função "repeat(3, 1fr)", está gerando 3 colunas flexiveis*/
+    grid-template-columns: repeat(3, 1fr);
+    /*O "grid-gap" vai dar uma separação das imagens para não ficar mais grudadas*/
+    /*"30px" em cima e embaixo, e "20px" nas laterais*/
+    grid-gap: 30px 20px;
+}
+
+main .content img{
+    width: 100%;
+    border-radius: 15px;
+    margin-bottom: 20px;
+}
+
+main.content h4{
+    font-size: 18px;
+    line-height: 21px;
+    color: #111111;
+    margin-bottom: 5px;
+}
+
+main .content p{
+    font-size: 14px;
+    line-height:16px;
+    color: #777;
+}
+
+main .description{
+    font-size: 18px;
+    color: #444444;
+    line-height: 28px;
+
+    padding: 20px 0 30px;
+}
+
+footer{
+    /*O "padding" com 23px em cima e embaixo, e 0px nas laterais*/
+    padding: 23px 0;
+    background: #EEEEEE;
+    font-size: 14px;
+    color: #999999;
+    text-align: center;
+}
+
+.modal-overlay{
+    background-color: rgba(0, 0, 0, 0.7);
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    /*Os dois campos abaixo "opacity" e "visibility" são utilizados aqui para NÃO mostrar o MODAL*/
+    opacity: 0;
+    visibility: hidden;
+}
+
+.modal{
+    background-color: white;
+    width: 90%;
+    max-width: 660px;
+    height: 413px;
+    box-sizing: border-box;
+    
+    margin: 25vh auto;
+    padding: 30px;
+    position: relative;
+
+    border-radius: 16px;
+}
+
+.modal-content .card img{
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 15px;
+
+    margin-bottom: 20px;
+}
+
+.modal-content .card h4{
+    font-size: 24px;
+    line-height: 28px;
+    color: #111111;
+    text-align: center;
+}
+
+.modal-content .card p{
+    font-size: 21px;
+    line-height: 18px;
+    color: #777777;
+    text-align: center;
+}
+
+.modal-content .close-modal a{
+    font-size: 16px;
+    color: #999999;
+    text-align: center;
+
+    display: block;
+
+    margin-top: 30px;
+}
+
+/* === MODAL.ACTIVE ===*/
+.modal-overlay.active{
+    /*Os dois campos abaixo "opacity" e "visibility" são utilizados aqui para MOSTRAR o MODAL*/
+    opacity: 1;
+    visibility: visible;
+}
