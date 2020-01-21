@@ -53,7 +53,7 @@ p{
 }
 
 .container{
-    max-width: 940px;
+    width: 940px;
     margin: 0px auto;
     margin-bottom: 50px;
     padding: 8px;
@@ -80,6 +80,79 @@ header{
     font-size: 16px;
     color: #111111;
     margin-right: 30px;
+}
+
+.hero{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background: #FBDFDB;
+    border-radius: 30px;
+}
+
+.hero .intro{
+    align-self: center;
+    width: 300px;
+    padding: 60px;
+}
+
+.hero .intro h1{
+    font-size: 32px;
+    line-height: 38px;
+    color: #111111;
+    margin-bottom: 10px;
+}
+
+.hero .intro p{
+    color: rgba(0, 0, 0, 0.7);
+    font-size: 18px;
+    line-height: 28px;
+}
+
+.hero img{
+    justify-self: center;
+}
+
+main{
+    margin: 50px 0;
+}
+
+main h2{
+    color: #111111;
+    font-size: 24px;
+    line-height: 28px;
+    margin-bottom: 20px;
+}
+
+main .content{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 30px 20px;
+}
+
+main .content img{
+    width: 100%;
+    border-radius: 15px;
+    margin-bottom: 20px;
+}
+
+main .content h4{
+    font-size: 18px;
+    line-height: 21px;
+    color: #111111;
+    margin-bottom: 5px;
+}
+
+main .content p{
+    font-size: 14px;
+    line-height: 16px;
+    color: #777;
+}
+
+.description{
+    color: #444444;
+    font-size: 18px;
+    line-height: 28px;
+    padding: 20px 0 30px;
 }
 
 .logo{

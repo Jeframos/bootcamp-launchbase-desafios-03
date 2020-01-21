@@ -20,7 +20,7 @@ for(let i = 0; i < 6; i++){
     recipesFiltered.push(recipes[i])
 }
 
-    console.log(recipesFiltered.length)
+    //console.log(recipesFiltered.length)
 
     return res.render("home", {items: recipesFiltered})
 })

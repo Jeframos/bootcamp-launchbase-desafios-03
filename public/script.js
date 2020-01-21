@@ -5,12 +5,12 @@ for(showHide of showHides){
 
 
     showHide.addEventListener("click", function(){
-        console.log(showHide.innerHTML === "ESCONDER")
+        console.log(showHide.innerHTML)
 
-        if(showHide.innerHTML === "MOSTRAR"){
+        if(showHide.innerHTML == "MOSTRAR"){
             //add class
             alert('Clique no mostrar!')
-        } else if(showHide.innerHTML === "ESCONDER"){
+        } else if(showHide.innerHTML == "ESCONDER"){
             //add class
 
             //add style
