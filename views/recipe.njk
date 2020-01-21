@@ -4,49 +4,50 @@
         <title>{{item.title}}</title>
     {% endblock %}
 
+
     {% block content %}
     <div class="recipe">
-        <div class="content">
-            <div class="card">
-                <img src="{{item.image}}" alt="{{item.title}}">
-                <h1>{{item.author}}</h1>
-                <h2>Por {{item.author}}</h2>
-            </div>
 
-            <div class="recipe-content">
-                <div id="ingredients" class="topic">
-                    <h3></h3>
-                    <h4>Assinhas de frango barbecue</h4>
-                    <div class="topic-content">
-                        <ul>
-                            {% for ingredient in item.ingredients %}
-                            <li>{{ingredient}}</li>
-                            {% endfor %}
-                        </ul>
-                    </div>
-                </div>
 
-                <div id="preparation" class="topic">
-                    <h3>Modo de Preparo</h3>
-                    <h4>MOSTRAR</h4>
-                    <div class="topic-content">
-                        <ul>
-                            {% for preparation in item.preparation %}
-                            <li>{{preparation}}</li>
-                            {% endfor %}
-                        </ul>
-                    </div>
-                </div>
+        <div class="recipe-header">
+            <img src="{{item.image}}" alt="{{item.title}}">
+            <h1>{{item.title}}</h1>
+            <h2>Por {{item.author}}</h2>
+        </div>
 
-                <div  id="information" class="topic">
-                    <h3>Informações adicionais</h3>
-                    <h4>MOSTRAR</h4>
-                    <div class="topic-content">
-                        <p>{{item.information}}</p>
-                    </div>
+        <div class="recipe-content">
+
+            <div id="ingredients" class="topic">
+                <h3>ingredientes</h3>
+                <h4>ESCONDER</h4>
+                <div class="topic-content">
+                    <ul>
+                        {% for ingredient in item.ingredients %}
+                        <li>{{ingredient}}</li>
+                        {% endfor %}
+                    </ul>
                 </div>
             </div>
-    
-    
+
+            <div id="preparation" class="topic">
+                <h3>Modo de Preparo</h3>
+                <h4>MOSTRAR</h4>
+                <div class="topic-content">
+                    <ul>
+                        {% for preparation in item.preparation %}
+                        <li>{{preparation}}</li>
+                        {% endfor %}
+                    </ul>
+                </div>
+            </div>
+
+            <div  id="information" class="topic">
+                <h3>Informações adicionais</h3>
+                <h4>MOSTRAR</h4>
+                <div class="topic-content">
+                    <p>{{item.information}}</p>
+                </div>
+            </div>
+        </div>
     </div>
     {% endblock content %}

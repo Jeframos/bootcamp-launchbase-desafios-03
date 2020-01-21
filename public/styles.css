@@ -59,6 +59,8 @@ p{
     padding: 8px;
     animation: fadeIn 0.5s ease-in-out;
     position: relative;
+
+    min-height: 85vh;
 }
 
 header{
@@ -96,6 +98,24 @@ header{
 .linkActive{
     font-weight: bold;
 }
+
+.hide{
+    display: none;
+}
+
+.show{
+    display: block;
+}
+
+footer{
+    /*O "padding" com 23px em cima e embaixo, e 0px nas laterais*/
+    padding: 23px 0;
+    background: #EEEEEE;
+    font-size: 14px;
+    color: #999999;
+    text-align: center;
+}
+
 
 @keyframes fadeIn{
     0% {
