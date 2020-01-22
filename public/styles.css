@@ -180,6 +180,57 @@ main .content p{
     display: block;
 }
 
+.recipe-header{
+    text-align: center;
+}
+
+.recipe-header img{
+    border-radius: 15px;
+}
+
+.recipe-header .description_recipe_1{
+    margin: 50px 0;
+}
+
+.description_recipe_1 h1{
+    color: #111111;
+    font-size: 36px;
+    line-height: 42px;
+}
+
+.description_recipe_1 h2{
+    color: #777777;
+    font-size: 20px;
+    line-height: 24px;
+}
+
+.description_recipe_2{
+    display: grid;
+    grid-template-columns: auto 1fr;
+    margin-bottom: 20px;
+    align-items: center;
+}
+
+.description_recipe_2 h3{
+    font-size: 24px;
+    line-height: 28px;
+    padding: 0 8px 0 0;
+}
+
+.description_recipe_2 h4{
+    color: #999999;
+    font-size: 12px;
+    line-height: 14px;
+    cursor: pointer;
+}
+
+.topic-content{
+    color: #444444;
+    font-size: 18px;
+    line-height: 28px;
+    margin: 20px;
+}
+
 footer{
     /*O "padding" com 23px em cima e embaixo, e 0px nas laterais*/
     padding: 23px 0;
@@ -188,7 +239,6 @@ footer{
     color: #999999;
     text-align: center;
 }
-
 
 @keyframes fadeIn{
     0% {

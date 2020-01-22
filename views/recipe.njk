@@ -11,15 +11,18 @@
 
         <div class="recipe-header">
             <img src="{{item.image}}" alt="{{item.title}}">
-            <h1>{{item.title}}</h1>
-            <h2>Por {{item.author}}</h2>
+            <div class="description_recipe_1">
+                <h1>{{item.title}}</h1>
+                <h2>por {{item.author}}</h2>
+            </div>
         </div>
 
         <div class="recipe-content">
-
             <div id="ingredients" class="topic">
-                <h3>ingredientes</h3>
-                <h4>ESCONDER</h4>
+                <div class="description_recipe_2">
+                    <h3>ingredientes</h3>
+                    <h4>ESCONDER</h4>
+                </div>
                 <div class="topic-content">
                     <ul>
                         {% for ingredient in item.ingredients %}
@@ -30,8 +33,10 @@
             </div>
 
             <div id="preparation" class="topic">
-                <h3>Modo de Preparo</h3>
-                <h4>MOSTRAR</h4>
+                <div class="description_recipe_2">
+                    <h3>Modo de Preparo</h3>
+                    <h4>MOSTRAR</h4>
+                </div>    
                 <div class="topic-content">
                     <ul>
                         {% for preparation in item.preparation %}
@@ -42,8 +47,10 @@
             </div>
 
             <div  id="information" class="topic">
-                <h3>Informações adicionais</h3>
-                <h4>MOSTRAR</h4>
+                <div class="description_recipe_2">
+                    <h3>Informações adicionais</h3>
+                    <h4>MOSTRAR</h4>
+                </div>
                 <div class="topic-content">
                     <p>{{item.information}}</p>
                 </div>
