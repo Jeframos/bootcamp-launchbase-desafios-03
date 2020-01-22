@@ -21,41 +21,13 @@
     </h2>
 
     <div class="content">
+        {% for item in items %}
         <div class="card">
-            <img src="/assets/asinhas.png" alt="Assa de frango">
-            <h4>Assinhas de frango barbecue</h4>
-            <p>Por Vania Steroski</p>
+            <img src="{{item.image}}" alt="{{item.title}}">
+            <h4>{{item.title}}</h4>
+            <p>por {{item.author}}</p>
         </div>
-
-        <div class="card">
-            <img src="/assets/asinhas.png" alt="Assa de frango">
-            <h4>Assinhas de frango barbecue</h4>
-            <p>Por Vania Steroski</p>
-        </div>
-
-        <div class="card">
-            <img src="/assets/asinhas.png" alt="Assa de frango">
-            <h4>Assinhas de frango barbecue</h4>
-            <p>Por Vania Steroski</p>
-        </div>
-
-        <div class="card">
-            <img src="/assets/asinhas.png" alt="Assa de frango">
-            <h4>Assinhas de frango barbecue</h4>
-            <p>Por Vania Steroski</p>
-        </div>
-
-        <div class="card">
-            <img src="/assets/asinhas.png" alt="Assa de frango">
-            <h4>Assinhas de frango barbecue</h4>
-            <p>Por Vania Steroski</p>
-        </div>
-
-        <div class="card">
-            <img src="/assets/asinhas.png" alt="Assa de frango">
-            <h4>Assinhas de frango barbecue</h4>
-            <p>Por Vania Steroski</p>
-        </div>
+        {% endfor %}
     </div>
 </main>
 {% endblock %}

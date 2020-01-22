@@ -14,15 +14,17 @@ nunjucks.configure("views", {
 })
 
 server.get("/", function(req, res){
-let recipesFiltered = []
+/*
+    let recipesFiltered = []
 
-for(let i = 0; i < 6; i++){
-    recipesFiltered.push(recipes[i])
-}
+    for(let i = 0; i < 6; i++){
+        recipesFiltered.push(recipes[i])
+    }
 
-    //console.log(recipesFiltered.length)
+    console.log(recipesFiltered.length)
+*/
 
-    return res.render("home", {items: recipesFiltered})
+    return res.render("home", {items: recipes})
 })
 
 server.get("/recipes", function(req, res){
