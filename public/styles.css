@@ -231,6 +231,10 @@ main .content p{
     margin: 20px;
 }
 
+#information .topic-content{
+    margin: 0px;
+}
+
 footer{
     /*O "padding" com 23px em cima e embaixo, e 0px nas laterais*/
     padding: 23px 0;
