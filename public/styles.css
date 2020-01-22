@@ -208,7 +208,7 @@ main .content p{
     display: grid;
     grid-template-columns: auto 1fr;
     margin-bottom: 20px;
-    align-items: center;
+    align-items: baseline;
 }
 
 .description_recipe_2 h3{
