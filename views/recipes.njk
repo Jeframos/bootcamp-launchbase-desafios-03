@@ -5,9 +5,11 @@
     <div class="content">
         {% for item in items %}
         <div class="card">
-            <img src="{{item.image}}" alt="{{item.title}}">
-            <h4>{{item.title}}</h4>
-            <p>por {{item.author}}</p>
+            <a href="/recipes/{{item.index}}">
+                <img src="{{item.image}}" alt="{{item.title}}">
+                <h4>{{item.title}}</h4>
+                <p>por {{item.author}}</p>
+            </a>
         </div>
         {% endfor%}
     </div>

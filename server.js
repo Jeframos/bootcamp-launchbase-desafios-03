@@ -14,20 +14,22 @@ nunjucks.configure("views", {
 })
 
 server.get("/", function(req, res){
-/*
-    let recipesFiltered = []
-
-    for(let i = 0; i < 6; i++){
-        recipesFiltered.push(recipes[i])
-    }
-
-    console.log(recipesFiltered.length)
-*/
-
     return res.render("home", {items: recipes})
 })
 
+server.get("/about", function(req, res){
+    return res.render("about")
+})
+
 server.get("/recipes", function(req, res){
+    const recipesFiltered = []
+
+    for(let i = 0; i < 6; i++){
+        const obj = recipes[i]
+        obj.index = i
+        recipesFiltered.push(obj)
+    }
+
     return res.render("recipes", {items: recipes})
 })
 
@@ -38,10 +40,6 @@ server.get("/recipes/:index", function(req, res){
 
     if(!recipe) return res.send("Recipe not found!")   
     return res.render("recipe", { item: recipe})
-})
-
-server.get("/about", function(req, res){
-    return res.render("about")
 })
 
 server.listen(3000, function(){
